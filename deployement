@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployement
+metadata:
+  name: flm
+spec:
+  replicas: 2
+    selector:
+      matchlabels:
+        app: monitor
+  terminate: 
+    metadata: 
+      labels: 
+        app: monitor
+  spec: 
+    containers:
+      - name: cont-1
+        image: palaganivamsi/pythonflask:1.0
+        Ports: 
+          - containerPort: 80
