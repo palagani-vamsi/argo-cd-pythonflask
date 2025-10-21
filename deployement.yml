@@ -16,5 +16,5 @@ spec:
     containers:
       - name: cont-1
         image: palaganivamsi/pythonflask:1.0
-        Ports: 
+        ports: 
           - containerPort: 80
